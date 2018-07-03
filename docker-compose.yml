@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+
+  database:
+    build:
+      context: ./dev-settings
+    image: my-local-database
+    # set default mysql root password, change as needed
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    # Expose port 3306 to host. Not for the application but
+    # handy to inspect the database from the host machine.
+    ports:
+      - "3306:3306"
+    restart: always
