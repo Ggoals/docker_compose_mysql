@@ -1,4 +1,4 @@
-FROM mysql:5.6.40
+FROM mysql:8.0.11
 
 # Copy the database initialize script:
 # Contents of /docker-entrypoint-initdb.d are run on mysqld startup
